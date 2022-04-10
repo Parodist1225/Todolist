@@ -1,0 +1,247 @@
+body{
+  background: #f5f5f5;
+  position: relative;
+  height: 500px;
+}
+.box{
+  position:absolute;
+  left:28%;
+  margin: 0 auto;
+}
+.head{
+  position: relative;
+  width:auto;
+  padding-left: 10px;
+  font-size: 100px;
+  font-weight: 500;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+}
+/* 实际上是completeALL功能 */
+.gray{
+  position: absolute;
+  height: 60px;
+  width: 34px;
+}
+label:before {
+  position: absolute;
+  content: '﹀';
+  font-size: 22px;
+  padding: 18px 17px 15px 17px;
+  color: #e6e6e6;
+  z-index: 10;
+}
+.black:before{
+  color: black;
+  opacity: 0.7;
+}
+.gray::before{
+  color: #e6e6e6;
+}
+::placeholder{
+  opacity: 0.3;
+  font-style: italic;
+}
+.new{
+  border: none;
+  font-size: 24px;
+  padding: 16px 16px 16px 60px;
+  position: relative;
+  width:484px;
+  outline:none;
+  box-shadow:#666 0 0 0.05rem;
+  /* box-shadow: inset 1px 1px 1px 0.5px rgba(0, 0, 0, 0.2); */
+  /* box-shadow: inset 0 -2px 1px rgb(0 0 0 / 3%); */
+}
+
+.main{
+background: #fff;   
+position: relative;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  box-shadow:#666 0 0 0.1rem;
+  /* box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.2); */
+}
+li{
+  list-style: none; 
+  position: relative;
+  font-size: 24px;
+  font-weight: 300;
+  outline: 1px solid #ededed;
+  word-break:break-all;
+  display: block;
+  height: 60px;
+  line-height: 60px;
+  border-collapse: collapse;
+  box-shadow: #666 0 0 0.05rem;
+  /* box-shadow: inset 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow:  1px 1px 1px 1px rgba(0, 0, 0, 0.1); */
+}
+/* 改变checkbox样式 */
+input[type='checkbox'] {
+  position: relative;
+  margin-right: 1px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 1.8rem;
+  height: 1.8rem;
+  visibility: hidden;
+}
+input[type='checkbox']::after {
+  position: absolute;
+  top:0;
+  width: 1.8rem;
+  height: 1.8rem;
+  content: " ";
+  margin-left: 5px;
+  margin-top: 5px;
+  text-align: center;
+  outline: 1px solid #e6e6e6;
+  visibility: visible;
+  display: inline-block;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+input[type='checkbox'].green::after{
+  outline: 1px solid #5dc2af;
+}
+input[type='checkbox'].origin::after{
+  outline: 1px solid #e6e6e6;
+}
+input[type='checkbox']:checked::after {
+  position: absolute;
+  content: "✓";
+  font-size: 1.5rem;
+  color:#42e750;
+  opacity: 0.6;
+}  
+span{
+  position: absolute;
+  left:56px;
+}
+.changespan{
+  user-select:none;
+  height: auto;
+  line-height: 2.5;
+	overflow: auto;
+  padding-left:0.3em;
+  padding-right:0.3em;
+}
+[contenteditable]:focus{
+  border-collapse: collapse;
+  height: 100%;
+  width: 490px;
+  outline: 0.5px solid rgba(0, 0, 0, 0.2);
+  box-shadow:#666 0 0 0.1rem;
+  
+}
+.Ebtn{
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  color: #cc9a9a;
+  background-color: white;
+  border: #fff;
+  margin-bottom: 10px;
+  transition: color 0.2s ease-out;
+  z-index: 0;
+}
+.Ebtn::after{
+  content: 'x';
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 20px; 
+  height: 20px;
+  cursor: pointer;
+  
+}
+.Ebtn:hover {
+  color: #af5b5e;
+}
+.change,.change1,.change2{
+  position: relative;
+  top:0.1rem;
+  display: none; 
+  height:50px;
+  color: #777;
+  border-collapse: collapse;
+  box-shadow:#666 0 0 0.05rem;
+}
+.change1{
+  border-collapse: collapse;
+  height:3px;
+  width: 550px;
+  margin:0 auto;
+  top:101%;
+  background-color: #fff;
+
+}
+.change2{
+  border-collapse: collapse;
+  height:3px;
+  width: 540px;
+  margin:0 auto;
+  top:101%;
+  background-color: #fff;
+
+}
+.count{
+  top:15px; 
+  padding: 0px;
+  bottom:20px;
+  left:1rem;
+}
+.all,.active,.complete,.clear{
+  position: absolute;
+  background-color:white;
+  color: #777;
+  top:12px; 
+}
+.all{
+  cursor: pointer;
+  position: absolute;
+  left:35%;
+  margin: 3px;
+  padding: 3px 7px;
+  border: 1px solid transparent;
+  border-color: rgba(175, 47, 47, 0.2);
+  border-radius: 3px;
+}
+.active{
+  cursor: pointer;
+  position: absolute;
+  left:45%;
+  margin: 3px;
+  padding: 3px 7px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.complete{
+  cursor: pointer;
+  position: absolute;
+  left:57%;
+  margin: 3px;
+  padding: 3px 7px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}
+.all:hover,.active:hover,.complete:hover{
+  border-color: rgba(175, 47, 47, 0.1);
+}
+.clear{
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right:5%;
+  margin: 3px;
+  padding: 3px 7px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>better-storage</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="box">
+    <div class="head">
+      todos
+    </div>
+    <div class="main">
+      <label class="gray" onclick="completeAll()"></label>
+      <input type="text" class="new" placeholder="What needs to be done?" autofocus>
+      <div class="listArea">
+        <ul class="list">
+        </ul>
+      </div>
+      <div class="change">
+        <span class="count">
+          <strong class="number"></strong> items left
+        </span>
+        <button class="all" onclick="rall()">All</button>
+        <button class="active" onclick="active()">Active</button>
+        <button class="complete" onclick="complete()">Completed</button>
+        <button class="clear" onclick="clearall()">clear Completed</button>
+        <div class="change1">
+          <div class="change2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src='bottomBtn.js'></script>
+  <script type="text/javascript" src='storage.js'></script>
+  <script type="text/javascript" src='inputArea.js'></script>
+  <script type="text/javascript" src='completeDel.js'></script>
+  <!-- <script type="text/javascript" src='localstorage.js'></script> -->
+  <script>
+    window.onload = function () {
+      //lload();
+      onn();
+      //localStorage.clear();
+      if (sum == 0) {
+        let allbtn = document.querySelector(".gray");
+        allbtn.style.display = "none";
+      }
+    }
+    window.onunload = function () {
+      //lsave();
+    }
+    window.addEventListener("load", lload);
+    window.addEventListener("load", onn);
+    window.addEventListener("unload", lsave);
+
+  </script>
+</body>
+</html>
